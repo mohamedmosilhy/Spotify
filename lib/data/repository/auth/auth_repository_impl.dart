@@ -5,7 +5,7 @@ import 'package:spotify/data/sources/auth/auth_firebase_service.dart';
 import 'package:spotify/domain/repository/auth/auth.dart';
 import 'package:spotify/service_locator.dart';
 
-class AuthRepositoryImpl extends AuthRepositry {
+class AuthRepositoryImpl extends AuthRepository {
   @override
   Future<Either> signin(SigninUserReq signinUserReq) async {
     return await serviceLocator<AuthFirebaseService>().signin(signinUserReq);
