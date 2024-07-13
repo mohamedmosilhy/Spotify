@@ -33,10 +33,10 @@ class AuthFirebaseServiceImpl implements AuthFirebaseService {
   @override
   Future<Either> signup(CreateUserReq createUserReq) async {
     try {
-      await FirebaseAuth.instance.createUserWithEmailAndPassword(
+      var data = await FirebaseAuth.instance.createUserWithEmailAndPassword(
           email: createUserReq.email, password: createUserReq.password);
 
-      FirebaseFirestore.instance.collection("Users").add({
+      FirebaseFirestore.instance.collection("Users").doc(data.user?.uid).set({
         "name": createUserReq.fullname,
         "email": createUserReq.email,
       });
