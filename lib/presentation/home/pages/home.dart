@@ -6,6 +6,7 @@ import 'package:spotify/core/config/assets/app_images.dart';
 import 'package:spotify/core/config/assets/app_vector.dart';
 import 'package:spotify/core/config/theme/app_colors.dart';
 import 'package:spotify/presentation/home/widgets/news_songs.dart';
+import 'package:spotify/presentation/home/widgets/play_list.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -53,6 +54,7 @@ class _HomePageState extends State<HomePage>
                 ],
               ),
             ),
+            const PlayList(),
           ],
         ),
       ),
@@ -84,6 +86,7 @@ class _HomePageState extends State<HomePage>
 
   Widget _tabs() {
     return TabBar(
+      tabAlignment: TabAlignment.start,
       controller: _tabController,
       isScrollable: true,
       padding: const EdgeInsets.symmetric(vertical: 40, horizontal: 16),
@@ -92,19 +95,19 @@ class _HomePageState extends State<HomePage>
       tabs: const [
         Text(
           'News',
-          style: TextStyle(fontWeight: FontWeight.w500, fontSize: 19),
+          style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
         ),
         Text(
           'Videos',
-          style: TextStyle(fontWeight: FontWeight.w500, fontSize: 19),
+          style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
         ),
         Text(
           'Artists',
-          style: TextStyle(fontWeight: FontWeight.w500, fontSize: 19),
+          style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
         ),
         Text(
           'Podcasts',
-          style: TextStyle(fontWeight: FontWeight.w500, fontSize: 19),
+          style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
         )
       ],
     );

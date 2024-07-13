@@ -19,12 +19,6 @@ class SongModel {
     artist = data['artist'];
     duration = data['duration'];
     releaseDate = data['releaseDate'];
-
-    // Print values from JSON
-    print('Title from JSON: $title');
-    print('Artist from JSON: $artist');
-    print('Duration from JSON: $duration');
-    print('Release Date from JSON: $releaseDate');
   }
 
   @override
@@ -35,12 +29,6 @@ class SongModel {
 
 extension SongModelX on SongModel {
   SongEntity toEntity() {
-    // Print values in toEntity
-    print('Title in toEntity: $title');
-    print('Artist in toEntity: $artist');
-    print('Duration in toEntity: $duration');
-    print('Release Date in toEntity: $releaseDate');
-
     return SongEntity(
       title: title!,
       artist: artist!,

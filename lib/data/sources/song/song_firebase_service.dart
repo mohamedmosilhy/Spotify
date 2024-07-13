@@ -4,12 +4,13 @@ import 'package:spotify/data/models/song/song.dart';
 import 'package:spotify/domain/entities/song/song.dart';
 
 abstract class SongFirebaseService {
-  Future<Either<String, List<SongEntity>>> getNewsSongs();
+  Future<Either> getNewsSongs();
+  Future<Either> getPlayList();
 }
 
 class SongFirebaseServiceImpl extends SongFirebaseService {
   @override
-  Future<Either<String, List<SongEntity>>> getNewsSongs() async {
+  Future<Either> getNewsSongs() async {
     try {
       List<SongEntity> songs = [];
       var data = await FirebaseFirestore.instance
@@ -25,7 +26,26 @@ class SongFirebaseServiceImpl extends SongFirebaseService {
 
       return Right(songs);
     } catch (e) {
-      print('Error occurred: $e');
+      return const Left("An Error occurred.");
+    }
+  }
+
+  @override
+  Future<Either> getPlayList() async {
+    try {
+      List<SongEntity> songs = [];
+      var data = await FirebaseFirestore.instance
+          .collection('Songs')
+          .orderBy('releaseDate', descending: true)
+          .get();
+
+      for (var element in data.docs) {
+        var songModel = SongModel.fromJson(element.data());
+        songs.add(songModel.toEntity());
+      }
+
+      return Right(songs);
+    } catch (e) {
       return const Left("An Error occurred.");
     }
   }
