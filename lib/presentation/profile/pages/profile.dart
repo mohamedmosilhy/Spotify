@@ -16,9 +16,10 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const BasicAppBar(
-        backgroundColor: Color(0xff2C2B2B),
-        title: Text('Profile'),
+      appBar: BasicAppBar(
+        backgroundColor:
+            context.isDarkMode ? const Color(0xff2C2B2B) : Colors.transparent,
+        title: const Text('Profile'),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,7 +38,7 @@ class ProfilePage extends StatelessWidget {
     return BlocProvider(
       create: (context) => ProfileInfoCubit()..getUser(),
       child: Container(
-        height: MediaQuery.of(context).size.height / 3.5,
+        height: MediaQuery.of(context).size.height / 3,
         width: double.infinity,
         decoration: BoxDecoration(
             color: context.isDarkMode ? const Color(0xff2C2B2B) : Colors.white,
@@ -73,7 +74,8 @@ class ProfilePage extends StatelessWidget {
                   Text(
                     state.userEntity.fullName!,
                     style: const TextStyle(
-                        fontSize: 22, fontWeight: FontWeight.bold),
+                        fontSize: 20, fontWeight: FontWeight.bold),
+                    textAlign: TextAlign.center,
                   )
                 ],
               );

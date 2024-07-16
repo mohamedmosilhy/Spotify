@@ -30,35 +30,45 @@ A Flutter-based Spotify-like music streaming application.
 
 ### Splash Page
 
-![Splash Page](path_to_splash_page_image)
+<img src="screenshots/splash.jpg" alt="Splash Page" width="400"/>
 
 ### Get Started Page
 
-![Get Started Page](path_to_get_started_page_image)
+<img src="screenshots/get_started.jpg" alt="Get Started Page" width="400"/>
 
 ### Choose Mode Page
 
-![Choose Mode Page](path_to_choose_mode_page_image)
+<img src="screenshots/choose_mode.jpg" alt="Choose Mode Page" width="400"/>
+
+### Register Or Signin Page
+
+<img src="screenshots/register_or_signin_dark.jpg" alt="Register Or Signin Page - Dark" width="400"/>
+<img src="screenshots/register_or_signin_light.jpg" alt="Register Or Signin Page - Light" width="400"/>
 
 ### Login Page
 
-![Login Page](path_to_login_page_image)
+<img src="screenshots/signin_dark.jpg" alt="Login Page - Dark" width="400"/>
+<img src="screenshots/signin_light.jpg" alt="Login Page - Light" width="400"/>
 
 ### Signup Page
 
-![Signup Page](path_to_signup_page_image)
+<img src="screenshots/register_dark.jpg" alt="Signup Page - Dark" width="400"/>
+<img src="screenshots/register_light.jpg" alt="Signup Page - Light" width="400"/>
 
 ### Home Page
 
-![Home Page](screenshots/)
+<img src="screenshots/home_dark.jpg" alt="Home Page - Dark" width="400"/>
+<img src="screenshots/home_light.jpg" alt="Home Page - Light" width="400"/>
 
 ### Music Player Page
 
-![Music Player Page](path_to_music_player_page_image)
+<img src="screenshots/player_dark.jpg" alt="Music Player Page - Dark" width="400"/>
+<img src="screenshots/player_light.jpg" alt="Music Player Page - Light" width="400"/>
 
 ### User Profile Page
 
-![User Profile Page](path_to_user_profile_page_image)
+<img src="screenshots/profile_dark.jpg" alt="User Profile Page - Dark" width="400"/>
+<img src="screenshots/profile_light.jpg" alt="User Profile Page - Light" width="400"/>
 
 ## Setup Instructions
 
