@@ -30,45 +30,45 @@ A Flutter-based Spotify-like music streaming application.
 
 ### Splash Page
 
-<img src="screenshots/splash.jpg" alt="Splash Page" width="400"/>
+<img src="screenshots/splash.jpg" alt="Splash Page" width="300"/>
 
 ### Get Started Page
 
-<img src="screenshots/get_started.jpg" alt="Get Started Page" width="400"/>
+<img src="screenshots/get_started.jpg" alt="Get Started Page" width="300"/>
 
 ### Choose Mode Page
 
-<img src="screenshots/choose_mode.jpg" alt="Choose Mode Page" width="400"/>
+<img src="screenshots/choose_mode.jpg" alt="Choose Mode Page" width="300"/>
 
 ### Register Or Signin Page
 
-<img src="screenshots/register_or_signin_dark.jpg" alt="Register Or Signin Page - Dark" width="400"/>
-<img src="screenshots/register_or_signin_light.jpg" alt="Register Or Signin Page - Light" width="400"/>
+<img src="screenshots/register_or_signin_dark.jpg" alt="Register Or Signin Page - Dark" width="300"/>
+<img src="screenshots/register_or_signin_light.jpg" alt="Register Or Signin Page - Light" width="300"/>
 
 ### Login Page
 
-<img src="screenshots/signin_dark.jpg" alt="Login Page - Dark" width="400"/>
-<img src="screenshots/signin_light.jpg" alt="Login Page - Light" width="400"/>
+<img src="screenshots/signin_dark.jpg" alt="Login Page - Dark" width="300"/>
+<img src="screenshots/signin_light.jpg" alt="Login Page - Light" width="300"/>
 
 ### Signup Page
 
-<img src="screenshots/register_dark.jpg" alt="Signup Page - Dark" width="400"/>
-<img src="screenshots/register_light.jpg" alt="Signup Page - Light" width="400"/>
+<img src="screenshots/register_dark.jpg" alt="Signup Page - Dark" width="300"/>
+<img src="screenshots/register_light.jpg" alt="Signup Page - Light" width="300"/>
 
 ### Home Page
 
-<img src="screenshots/home_dark.jpg" alt="Home Page - Dark" width="400"/>
-<img src="screenshots/home_light.jpg" alt="Home Page - Light" width="400"/>
+<img src="screenshots/home_dark.jpg" alt="Home Page - Dark" width="300"/>
+<img src="screenshots/home_light.jpg" alt="Home Page - Light" width="300"/>
 
 ### Music Player Page
 
-<img src="screenshots/player_dark.jpg" alt="Music Player Page - Dark" width="400"/>
-<img src="screenshots/player_light.jpg" alt="Music Player Page - Light" width="400"/>
+<img src="screenshots/player_dark.jpg" alt="Music Player Page - Dark" width="300"/>
+<img src="screenshots/player_light.jpg" alt="Music Player Page - Light" width="300"/>
 
 ### User Profile Page
 
-<img src="screenshots/profile_dark.jpg" alt="User Profile Page - Dark" width="400"/>
-<img src="screenshots/profile_light.jpg" alt="User Profile Page - Light" width="400"/>
+<img src="screenshots/profile_dark.jpg" alt="User Profile Page - Dark" width="300"/>
+<img src="screenshots/profile_light.jpg" alt="User Profile Page - Light" width="300"/>
 
 ## Setup Instructions
 
