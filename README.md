@@ -75,7 +75,7 @@ A Flutter-based Spotify-like music streaming application.
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/your-username/spotify-clone.git
+   git clone https://github.com/mohamedmosilhy/Spotify.git
    cd spotify-clone
    ```
 
