@@ -1,106 +1,121 @@
-# Spotify Clone 🎶
+# Flutter Spotify Clone
 
-A Flutter-based Spotify-like music streaming application.
+A cross-platform music application inspired by Spotify, built to demonstrate authentication, cloud-backed music discovery, audio playback, favorites, profiles, and persistent light/dark themes in Flutter.
+
+[View the source](https://github.com/mohamedmosilhy/Spotify)
+
+<p>
+  <img src="screenshots/home_dark.jpg" alt="Spotify Clone dark home screen" width="220">
+  <img src="screenshots/player_dark.jpg" alt="Spotify Clone dark player" width="220">
+  <img src="screenshots/profile_dark.jpg" alt="Spotify Clone dark profile" width="220">
+</p>
 
 ## Features
 
-- Project Structure
-- Theme Of Application 🎨
-- Assets & Fonts Folders / Defining In Pubspec
-- Splash Page
-- Get Started Page
-- Choose Mode Page
-- Choose Mode Logic
-- Login Or Signup Page 🔒
-- Login Page
-- Signup Page
-- Firebase Setup 🔥
-- Auth Domain Layer
-- Auth Data Layer
-- Service Locator
-- Using Auth Use Cases
-- Upload Songs To FireStorage
-- Upload Song Covers To FireStorage
-- Create Cloud FireStore Collections (Songs, Users, ...)
-- Home Page (Tabs, Songs, ...)
-- Music Player Page
-- User Profile Page (Favorite Songs)
+- Email and password registration and sign-in
+- Firestore-powered new releases and complete playlist views
+- Audio streaming with play, pause, seek, and duration tracking
+- Add or remove songs from a user-specific favorites collection
+- Profile screen with account details and favorite tracks
+- Persistent light and dark theme selection
+- Splash, onboarding, authentication, home, player, and profile flows
+- Responsive asset-driven interface with custom Satoshi fonts
 
-## Screenshots
+## Architecture
 
-### Splash Page
+The project separates responsibilities into data, domain, and presentation layers:
 
-<img src="screenshots/splash.jpg" alt="Splash Page" width="300"/>
+- `data` implements Firebase services, models, and repository classes.
+- `domain` defines entities, repository contracts, and use cases.
+- `presentation` contains screens, widgets, and Bloc/Cubit state.
+- `service_locator.dart` registers services, repositories, and use cases with `get_it`.
+- `common` and `core` contain shared widgets, theme configuration, and helpers.
 
-### Get Started Page
+Firebase Authentication manages accounts, while Cloud Firestore stores users, songs, and per-user favorite records. `just_audio` handles playback from each song's configured URL.
 
-<img src="screenshots/get_started.jpg" alt="Get Started Page" width="300"/>
+## Built with
 
-### Choose Mode Page
+- Flutter and Dart
+- Firebase Core, Authentication, and Cloud Firestore
+- flutter_bloc and hydrated_bloc
+- just_audio
+- get_it
+- dartz
+- flutter_svg
 
-<img src="screenshots/choose_mode.jpg" alt="Choose Mode Page" width="300"/>
+## Getting started
 
-### Register Or Signin Page
+### Prerequisites
 
-<img src="screenshots/register_or_signin_dark.jpg" alt="Register Or Signin Page - Dark" width="300"/>
-<img src="screenshots/register_or_signin_light.jpg" alt="Register Or Signin Page - Light" width="300"/>
+- Flutter with Dart SDK `>=3.4.3 <4.0.0`
+- A Firebase project
+- FlutterFire CLI for regenerating platform configuration when using your own project
 
-### Login Page
+### Installation
 
-<img src="screenshots/signin_dark.jpg" alt="Login Page - Dark" width="300"/>
-<img src="screenshots/signin_light.jpg" alt="Login Page - Light" width="300"/>
+```bash
+git clone https://github.com/mohamedmosilhy/Spotify.git
+cd Spotify
+flutter pub get
+```
 
-### Signup Page
+### Firebase configuration
 
-<img src="screenshots/register_dark.jpg" alt="Signup Page - Dark" width="300"/>
-<img src="screenshots/register_light.jpg" alt="Signup Page - Light" width="300"/>
+The repository contains generated Firebase options, but a fork should connect its own Firebase project:
 
-### Home Page
+```bash
+dart pub global activate flutterfire_cli
+flutterfire configure
+```
 
-<img src="screenshots/home_dark.jpg" alt="Home Page - Dark" width="300"/>
-<img src="screenshots/home_light.jpg" alt="Home Page - Light" width="300"/>
+Enable email/password authentication and create these Firestore collections:
 
-### Music Player Page
+- `Users` for profile records
+- `Songs` for track metadata such as title, artist, duration, release date, cover URL, and audio URL
+- `Users/{userId}/Favorites` for documents containing a `songId`
 
-<img src="screenshots/player_dark.jpg" alt="Music Player Page - Dark" width="300"/>
-<img src="screenshots/player_light.jpg" alt="Music Player Page - Light" width="300"/>
+Your Firestore security rules should restrict profile and favorite writes to the authenticated user.
 
-### User Profile Page
+### Run the app
 
-<img src="screenshots/profile_dark.jpg" alt="User Profile Page - Dark" width="300"/>
-<img src="screenshots/profile_light.jpg" alt="User Profile Page - Light" width="300"/>
+```bash
+flutter run
+```
 
-## Setup Instructions
+## Project structure
 
-1. **Clone the repository:**
+```text
+lib/
+├── common/               # Shared widgets, helpers, and favorite-button state
+├── core/                 # Assets and application themes
+├── data/                 # Firebase services, models, and repositories
+├── domain/               # Entities, contracts, and use cases
+├── presentation/         # Screens, widgets, and feature state
+├── firebase_options.dart
+├── service_locator.dart
+└── main.dart
+```
 
-   ```bash
-   git clone https://github.com/mohamedmosilhy/Spotify.git
-   cd spotify-clone
-   ```
+## Screens
 
-2. **Install dependencies:**
+<p>
+  <img src="screenshots/splash.jpg" alt="Splash screen" width="180">
+  <img src="screenshots/get_started.jpg" alt="Get started screen" width="180">
+  <img src="screenshots/choose_mode.jpg" alt="Theme selection screen" width="180">
+  <img src="screenshots/signin_light.jpg" alt="Light sign-in screen" width="180">
+</p>
 
-   ```bash
-   flutter pub get
-   ```
+<p>
+  <img src="screenshots/home_light.jpg" alt="Light home screen" width="180">
+  <img src="screenshots/player_light.jpg" alt="Light player screen" width="180">
+  <img src="screenshots/profile_light.jpg" alt="Light profile screen" width="180">
+</p>
 
-3. **Configure Firebase:**
+## Testing and analysis
 
-   - Follow the [Firebase setup instructions](https://firebase.google.com/docs/flutter/setup) for both Android and iOS.
+```bash
+flutter analyze
+flutter test
+```
 
-4. **Run the app:**
-   ```bash
-   flutter run
-   ```
-
-## Dependencies
-
-- Flutter SDK
-- Firebase Core
-- Firebase Auth
-- Cloud Firestore
-- Firebase Storage
-- Bloc
-- Equatable
-- Other dependencies as listed in `pubspec.yaml`
+The included test is still the Flutter template scaffold; feature-level tests are a useful next step.
